@@ -1,0 +1,241 @@
+/* MY HOSTED FONTS */
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 400;
+  src: url("../fonts/worksans-regular.woff2") format("woff2"),
+    url("../fonts/worksans-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 600;
+  src: url("../fonts/worksans-semibold.woff2") format("woff2"),
+    url("../fonts/worksans-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 700;
+  src: url("../fonts/worksans-bold.woff2") format("woff2"),
+    url("../fonts/worksans-bold.woff") format("woff");
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+  /* COLORS */
+  --clr-primary: hsl(292, 42%, 14%);
+  --clr-secondary: hsl(275, 100%, 97%);
+  --clr-neutral: hsl(0, 0%, 100%);
+  --clr-accent: hsl(292, 16%, 49%);
+
+  /* TYPOGRAPHY */
+  --ff-primary: "Work Sans", sans-serif;
+  --fs-primary: 1rem;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+/* RESETS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+ul[class],
+ol[class] {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img,
+figure,
+canvas,
+picture,
+video {
+  max-width: 100%;
+  margin: 0;
+  display: block;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  padding: 0;
+}
+
+/* UTILITY CLASSES */
+.active {
+  display: inline-block;
+}
+
+/* GENERAL STYLING */
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-400);
+  color: var(--clr-accent);
+  background-color: var(--clr-secondary);
+}
+
+.svg-background {
+  width: 100vw;
+  height: 22vh;
+  background-image: url("../images/background-pattern-mobile.svg");
+}
+
+@media (min-width: 500px) {
+  .svg-background {
+    height: 37.5vh;
+    background-image: url("../images/background-pattern-desktop.svg");
+  }
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+.hero {
+  color: var(--clr-primary);
+  background-color: var(--clr-neutral);
+  width: min(600px, 90dvw);
+  padding: 2.5rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px 2px hsl(292, 16%, 49%, 0.2);
+}
+
+@media (min-width: 550px) {
+  .hero {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.hero__title {
+  font-size: 3.125rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 2.5rem;
+}
+
+.hero__title::before {
+  content: url("../images/icon-star.svg");
+  margin-right: 1.5rem;
+}
+
+.hero__list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hero__list > *:not(:first-child) {
+  padding-top: 1rem;
+  border-top: 0.25px solid hsl(292, 16%, 49%, 0.2);
+}
+
+.hero__title,
+.hero__question {
+  color: var(--clr-primary);
+}
+
+.question-container {
+  position: relative;
+  display: block;
+}
+
+.question-container::after {
+  content: url("../images/icon-plus.svg");
+  width: 40px;
+  aspect-ratio: 1;
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 5px;
+  cursor: pointer;
+}
+
+.question-container .hero__question {
+  font-size: 1.1rem;
+  font-weight: var(--fw-700);
+  opacity: 0.9;
+  padding-right: 4.5rem;
+}
+
+button.hero__question--btn {
+  cursor: pointer;
+  text-align: left;
+  background-color: transparent;
+  display: block;
+  padding-block: 0.75rem;
+  border: 0;
+}
+
+.hero__question--btn:is(:hover, :focus) .hero__question {
+  color: #ad28eb;
+}
+
+.hero__answer {
+  opacity: 0.7;
+  height: 0;
+  margin-top: 0.5rem;
+  padding-right: 1rem;
+  overflow-y: hidden;
+  transition: 0.5s ease-out;
+}
+
+/* JAVASCRIPT STYLING */
+.hero__list--item .question-container.active::after {
+  content: url("../images/icon-minus.svg");
+}
+
+.hero__list--item .answer-container.active .hero__answer {
+  height: 9rem;
+}
+
+@media (min-width: 500px) {
+  .hero__list--item .answer-container.active .hero__answer {
+    height: 6rem;
+  }
+}
+
+/* ATTRIBUTION */
+.attribution {
+  font-size: var(--fs-primary);
+  text-align: center;
+  color: var(--clr-accent);
+}
+.attribution a {
+  color: var(--clr-primary);
+}
