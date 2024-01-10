@@ -50,7 +50,7 @@ html {
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -116,6 +116,7 @@ body {
   left: 0;
   right: 0;
   height: 22vh;
+  background-color: var(--clr-primary);
   background-image: url("../images/background-pattern-mobile.svg");
 }
 
@@ -199,7 +200,8 @@ button.hero__question--btn {
 }
 
 .hero__answer {
-  opacity: 0.7;
+  font-weight: var(--fw-400);
+  color: var(--clr-accent);
   height: 0;
   margin-top: 0.5rem;
   padding-right: 1rem;
@@ -213,7 +215,7 @@ button.hero__question--btn {
 }
 
 .hero__list--item .answer-container.active .hero__answer {
-  height: 9rem;
+  height: 9.25rem;
 }
 
 /* MEDIA QUERIES */
@@ -229,7 +231,7 @@ button.hero__question--btn {
   }
 
   .hero__list--item .answer-container.active .hero__answer {
-    height: 6rem;
+    height: 6.125rem;
   }
 }
 
