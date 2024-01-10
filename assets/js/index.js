@@ -1,14 +1,13 @@
 "use strict"
 
 // Variables
-
 const listItem = document.querySelectorAll(".hero__list--item");
 const question = document.querySelectorAll(".question-container");
 const answer = document.querySelectorAll(".answer-container");
 
 
+// using event delegation
 for (let i = 0; i < listItem.length; i++) {
-
     listItem[i].addEventListener("click", () => {
         // clicking on a question-title or plus-icon should
         // close any other opened answer and open the active div answer
