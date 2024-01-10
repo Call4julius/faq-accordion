@@ -110,7 +110,7 @@ body {
   place-items: center;
 }
 
-header.svg-background {
+.svg-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -153,9 +153,9 @@ header.svg-background {
   gap: 0.75rem;
 }
 
-.hero__list > *:not(:first-child) {
-  padding-top: 1rem;
-  border-top: 0.25px solid hsl(292, 16%, 49%, 0.2);
+.hero__list > * {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.25px solid hsl(292, 16%, 49%, 0.2);
 }
 
 .hero__title,
@@ -217,7 +217,7 @@ button.hero__question--btn {
 }
 
 .hero__list--item .answer-container.active .hero__answer {
-  height: 9.25rem;
+  height: 10rem;
 }
 
 /* MEDIA QUERIES */
@@ -233,7 +233,7 @@ button.hero__question--btn {
   }
 
   .hero__list--item .answer-container.active .hero__answer {
-    height: 6.125rem;
+    height: 7.5em;
   }
 }
 
