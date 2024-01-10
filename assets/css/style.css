@@ -115,7 +115,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 22vh;
+  height: 25vh;
   background-color: var(--clr-primary);
   background-image: url("../images/background-pattern-mobile.svg");
 }
