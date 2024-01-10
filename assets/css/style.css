@@ -45,6 +45,7 @@
 
 html {
   color-scheme: dark light;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -104,10 +105,16 @@ body {
   font-weight: var(--fw-400);
   color: var(--clr-accent);
   background-color: var(--clr-secondary);
+  padding-block: 2.5rem;
+  display: grid;
+  place-items: center;
 }
 
 .svg-background {
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 22vh;
   background-image: url("../images/background-pattern-mobile.svg");
 }
@@ -120,10 +127,8 @@ body {
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 10;
   display: grid;
   place-items: center;
   gap: 2rem;
