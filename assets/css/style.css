@@ -118,6 +118,9 @@ body {
   height: 25vh;
   background-color: var(--clr-primary);
   background-image: url("../images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .container {
@@ -195,6 +198,7 @@ button.hero__question--btn {
 
 .hero__question--btn:is(:hover, :focus) .hero__question {
   color: #ad28eb;
+  transition: 0.75s;
 }
 
 .hero__answer {
