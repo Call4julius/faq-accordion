@@ -187,7 +187,7 @@ body {
   padding-right: 4.5rem;
 }
 
-button.hero__question--btn {
+.hero__question--btn {
   cursor: pointer;
   text-align: left;
   background-color: transparent;
