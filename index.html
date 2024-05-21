@@ -1,82 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!-- my styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- page title -->
+    <title>Frontend Mentor | FAQ accordion</title>
+  </head>
 
-<head>
-  <!-- displays site properly based on user's device -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <!-- my styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- page title -->
-  <title>Frontend Mentor | FAQ accordion</title>
-</head>
-
-<body class="d-grid">
-  <main>
-    <header class="svg-background">
-
-    </header>
-    <div class="container d-grid">
-      <div class="hero">
-        <h1 class="hero__title">FAQs</h1>
-        <ul class="hero__list">
-          <li class="hero__list--item">
-            <div class="question-container">
-              <button type="button" class="hero__question--btn">
-                <h2 class="hero__question">What is Frontend Mentor, and how will it help me? </h2>
-              </button>
-            </div>
-            <div class="answer-container">
-              <p class="hero__answer">Frontend Mentor offers realistic coding challenges to help developers
-                improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-                all levels and ideal for portfolio building.</p>
-            </div>
-          </li>
-          <li class="hero__list--item">
-            <div class="question-container">
-              <button type="button" class="hero__question--btn">
-                <h2 class="hero__question">Is Frontend Mentor free?</h2>
-              </button>
-            </div>
-            <div class="answer-container">
-              <p class="hero__answer">Yes, Frontend Mentor offers both free and premium coding challenges, with
-                the free option providing access to a range of projects suitable for all skill levels.</p>
-            </div>
-          </li>
-          <li class="hero__list--item">
-            <div class="question-container">
-              <button type="button" class="hero__question--btn">
-                <h2 class="hero__question">Can I use Frontend Mentor projects in my portfolio?</h2>
-              </button>
-            </div>
-            <div class="answer-container">
-              <p class="hero__answer">Yes, you can use projects completed on Frontend Mentor in your portfolio.
-                It's an excellent way to showcase your skills to potential employers!</p>
-            </div>
-          </li>
-          <li class="hero__list--item">
-            <div class="question-container">
-              <button type="button" class="hero__question--btn">
-                <h2 class="hero__question">How can I get help if I'm stuck on a challenge?</h2>
-              </button>
-            </div>
-            <div class="answer-container">
-              <p class="hero__answer">The best place to get help is inside Frontend Mentor's Discord community.
-                There's a help channel where you can ask questions and seek support from other community members.
-              </p>
-            </div>
-          </li>
-        </ul>
+  <body class="d-grid">
+    <main>
+      <header class="svg-background"></header>
+      <div class="container d-grid">
+        <div class="hero">
+          <h1 class="hero__title">FAQs</h1>
+          <ul class="hero__list">
+            <li class="hero__list--item">
+              <div class="question-container active">
+                <button type="button" class="hero__question--btn">
+                  <h2 class="hero__question">
+                    What is Frontend Mentor, and how will it help me?
+                  </h2>
+                </button>
+              </div>
+              <div class="answer-container active">
+                <p class="hero__answer">
+                  Frontend Mentor offers realistic coding challenges to help
+                  developers improve their frontend coding skills with projects
+                  in HTML, CSS, and JavaScript. It's suitable for all levels and
+                  ideal for portfolio building.
+                </p>
+              </div>
+            </li>
+            <li class="hero__list--item">
+              <div class="question-container">
+                <button type="button" class="hero__question--btn">
+                  <h2 class="hero__question">Is Frontend Mentor free?</h2>
+                </button>
+              </div>
+              <div class="answer-container">
+                <p class="hero__answer">
+                  Yes, Frontend Mentor offers both free and premium coding
+                  challenges, with the free option providing access to a range
+                  of projects suitable for all skill levels.
+                </p>
+              </div>
+            </li>
+            <li class="hero__list--item">
+              <div class="question-container">
+                <button type="button" class="hero__question--btn">
+                  <h2 class="hero__question">
+                    Can I use Frontend Mentor projects in my portfolio?
+                  </h2>
+                </button>
+              </div>
+              <div class="answer-container">
+                <p class="hero__answer">
+                  Yes, you can use projects completed on Frontend Mentor in your
+                  portfolio. It's an excellent way to showcase your skills to
+                  potential employers!
+                </p>
+              </div>
+            </li>
+            <li class="hero__list--item">
+              <div class="question-container">
+                <button type="button" class="hero__question--btn">
+                  <h2 class="hero__question">
+                    How can I get help if I'm stuck on a challenge?
+                  </h2>
+                </button>
+              </div>
+              <div class="answer-container">
+                <p class="hero__answer">
+                  The best place to get help is inside Frontend Mentor's Discord
+                  community. There's a help channel where you can ask questions
+                  and seek support from other community members.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">call4julius@gmail.com</a>.
+        </div>
       </div>
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-        Coded by <a href="#">call4julius@gmail.com</a>.
-      </div>
-    </div>
-  </main>
-  <script src="assets/js/index.js"></script>
-</body>
-
+    </main>
+    <script src="assets/js/index.js"></script>
+  </body>
 </html>
