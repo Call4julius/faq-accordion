@@ -1,23 +1,23 @@
 /* MY HOSTED FONTS */
 @font-face {
-  font-family: "Work Sans";
+  font-family: 'Work Sans';
   font-weight: 400;
-  src: url("../fonts/worksans-regular.woff2") format("woff2"),
-    url("../fonts/worksans-regular.woff") format("woff");
+  src: url('../fonts/worksans-regular.woff2') format('woff2'),
+    url('../fonts/worksans-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Work Sans";
+  font-family: 'Work Sans';
   font-weight: 600;
-  src: url("../fonts/worksans-semibold.woff2") format("woff2"),
-    url("../fonts/worksans-semibold.woff") format("woff");
+  src: url('../fonts/worksans-semibold.woff2') format('woff2'),
+    url('../fonts/worksans-semibold.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Work Sans";
+  font-family: 'Work Sans';
   font-weight: 700;
-  src: url("../fonts/worksans-bold.woff2") format("woff2"),
-    url("../fonts/worksans-bold.woff") format("woff");
+  src: url('../fonts/worksans-bold.woff2') format('woff2'),
+    url('../fonts/worksans-bold.woff') format('woff');
 }
 
 /* CUSTOM PROPERTIES */
@@ -29,7 +29,7 @@
   --clr-accent: hsl(292, 16%, 49%);
 
   /* TYPOGRAPHY */
-  --ff-primary: "Work Sans", sans-serif;
+  --ff-primary: 'Work Sans', sans-serif;
   --fs-primary: 1rem;
   --fw-400: 400;
   --fw-600: 600;
@@ -117,7 +117,7 @@ body {
   right: 0;
   height: 25vh;
   background-color: var(--clr-primary);
-  background-image: url("../images/background-pattern-mobile.svg");
+  background-image: url('../images/background-pattern-mobile.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -147,7 +147,7 @@ body {
 }
 
 .hero__title::before {
-  content: url("../images/icon-star.svg");
+  content: url('../images/icon-star.svg');
   margin-right: 1.5rem;
 }
 
@@ -171,7 +171,7 @@ body {
 }
 
 .question-container::after {
-  content: url("../images/icon-plus.svg");
+  content: url('../images/icon-plus.svg');
   width: 40px;
   aspect-ratio: 1;
   position: absolute;
@@ -198,17 +198,21 @@ body {
 
 .hero__question--btn:is(:hover, :focus) .hero__question {
   color: #ad28eb;
-  transition: 0.75s;
+  transition: 0.5s;
+}
+
+.answer-container {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 600ms;
 }
 
 .hero__answer {
   font-weight: var(--fw-400);
   color: var(--clr-accent);
-  height: 0;
   margin-top: 0.5rem;
   padding-right: 1rem;
   overflow-y: hidden;
-  transition: 0.5s ease-out;
 }
 
 .hero__answer:hover {
@@ -217,27 +221,23 @@ body {
 
 /* JAVASCRIPT STYLING */
 .hero__list--item .question-container.active::after {
-  content: url("../images/icon-minus.svg");
+  content: url('../images/icon-minus.svg');
 }
 
-.hero__list--item .answer-container.active .hero__answer {
-  height: 10rem;
+.answer-container.active {
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 600ms 50ms;
 }
 
 /* MEDIA QUERIES */
-
 @media (min-width: 34.375em) {
   .svg-background {
     height: 37.5vh;
-    background-image: url("../images/background-pattern-desktop.svg");
+    background-image: url('../images/background-pattern-desktop.svg');
   }
 
   .hero {
     padding: 2.5rem 2rem;
-  }
-
-  .hero__list--item .answer-container.active .hero__answer {
-    height: 7.5em;
   }
 }
 
